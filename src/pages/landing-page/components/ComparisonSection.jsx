@@ -56,7 +56,7 @@ const ComparisonSection = () => {
       setTimeout(() => {
         animateValue(item.category, 'quickride', item.quickride.value);
         animateValue(item.category, 'traditional', item.traditional.value);
-      }, index * 200);
+      }, index * 100);
     });
   };
 
@@ -111,72 +111,73 @@ const ComparisonSection = () => {
           </p>
         </div>
 
-        {/* Comparison Grid */}
-        <div className="space-y-6 lg:space-y-8">
+        {/* Mobile-First Comparison Cards */}
+        <div className="space-y-6">
           {comparisonData.map((item, index) => (
             <div
               key={item.category}
-              className={`glass rounded-2xl p-6 lg:p-8 transition-all duration-300 spring ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`glass rounded-2xl p-6 transition-all duration-200 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
-                {/* Category */}
-                <div className="text-center md:text-left">
-                  <h3 className="text-xl lg:text-2xl font-heading font-bold text-foreground mb-2">
-                    {item.category}
-                  </h3>
-                  <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full">
-                    <Icon name="TrendingUp" size={16} className="text-primary" />
-                    <span className="text-sm font-body font-medium text-primary">
-                      {item.improvement}
-                    </span>
-                  </div>
+              {/* Category Header */}
+              <div className="text-center mb-6">
+                <h3 className="text-xl lg:text-2xl font-heading font-bold text-foreground mb-3">
+                  {item.category}
+                </h3>
+                <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full">
+                  <Icon name="TrendingUp" size={16} className="text-primary" />
+                  <span className="text-sm font-body font-medium text-primary">
+                    {item.improvement}
+                  </span>
                 </div>
+              </div>
 
-                {/* QuickRide Stats */}
+              {/* Comparison Cards - Side by Side */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {/* QuickRide Card */}
                 <div className="text-center">
-                  <div className="glass rounded-2xl p-6 glow-primary">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 glow-primary">
-                      <Icon name={item.quickride.icon} size={32} color="var(--color-primary-foreground)" />
+                  <div className="glass rounded-xl p-4 glow-primary">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto mb-3 glow-primary">
+                      <Icon name={item.quickride.icon} size={24} color="var(--color-primary-foreground)" />
                     </div>
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-primary mb-2">
+                    <div className="text-lg lg:text-2xl font-heading font-bold text-primary mb-1">
                       {getDisplayValue(item.category, 'quickride', item.quickride.value)}
-                      <span className="text-sm sm:text-lg text-muted-foreground ml-1">
+                      <span className="text-xs text-muted-foreground ml-1">
                         {item.quickride.unit}
                       </span>
                     </div>
-                    <div className="text-sm font-body font-medium text-foreground">
+                    <div className="text-xs font-body font-medium text-foreground">
                       QuickRide
                     </div>
                   </div>
                 </div>
 
-                {/* Traditional Stats */}
+                {/* Traditional Card */}
                 <div className="text-center">
-                  <div className="glass rounded-2xl p-6 opacity-60">
-                    <div className="w-16 h-16 bg-muted/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <Icon name={item.traditional.icon} size={32} color="var(--color-muted-foreground)" />
+                  <div className="glass rounded-xl p-4 opacity-60">
+                    <div className="w-12 h-12 bg-muted/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                      <Icon name={item.traditional.icon} size={24} color="var(--color-muted-foreground)" />
                     </div>
-                    <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-muted-foreground mb-2">
+                    <div className="text-lg lg:text-2xl font-heading font-bold text-muted-foreground mb-1">
                       {getDisplayValue(item.category, 'traditional', item.traditional.value)}
-                      <span className="text-sm sm:text-lg text-muted-foreground ml-1">
+                      <span className="text-xs text-muted-foreground ml-1">
                         {item.traditional.unit}
                       </span>
                     </div>
-                    <div className="text-sm font-body font-medium text-muted-foreground">
-                      Traditional Taxi
+                    <div className="text-xs font-body font-medium text-muted-foreground">
+                      Traditional
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Progress Bar */}
-              <div className="mt-6">
+              <div className="mt-4">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-body text-muted-foreground">Performance Advantage</span>
-                  <span className="text-sm font-body font-medium text-primary">{item.improvement}</span>
+                  <span className="text-xs font-body text-muted-foreground">Performance Advantage</span>
+                  <span className="text-xs font-body font-medium text-primary">{item.improvement}</span>
                 </div>
                 <div className="w-full bg-muted/20 rounded-full h-2">
                   <div 
@@ -192,7 +193,7 @@ const ComparisonSection = () => {
           ))}
         </div>
 
-        {/* Summary Stats */}
+        {/* Summary Stats - Mobile Optimized */}
         <div className="mt-12 lg:mt-16">
           <div className="glass rounded-2xl p-6 lg:p-8 glow-secondary">
             <div className="text-center mb-6">
@@ -204,22 +205,22 @@ const ComparisonSection = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 text-center">
               <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-heading font-bold text-primary">65%</div>
-                <div className="text-sm text-muted-foreground font-body">Average Improvement</div>
+                <div className="text-2xl lg:text-4xl font-heading font-bold text-primary">65%</div>
+                <div className="text-xs lg:text-sm text-muted-foreground font-body">Average Improvement</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-heading font-bold text-secondary">4.9★</div>
-                <div className="text-sm text-muted-foreground font-body">User Satisfaction</div>
+                <div className="text-2xl lg:text-4xl font-heading font-bold text-secondary">4.9★</div>
+                <div className="text-xs lg:text-sm text-muted-foreground font-body">User Satisfaction</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-heading font-bold text-accent">99.8%</div>
-                <div className="text-sm text-muted-foreground font-body">Reliability Rate</div>
+                <div className="text-2xl lg:text-4xl font-heading font-bold text-accent">99.8%</div>
+                <div className="text-xs lg:text-sm text-muted-foreground font-body">Reliability Rate</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-heading font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground font-body">Availability</div>
+                <div className="text-2xl lg:text-4xl font-heading font-bold text-primary">24/7</div>
+                <div className="text-xs lg:text-sm text-muted-foreground font-body">Availability</div>
               </div>
             </div>
           </div>

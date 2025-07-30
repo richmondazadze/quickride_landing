@@ -49,8 +49,8 @@ const FeatureCard = ({ feature, index }) => {
   return (
     <div
       ref={cardRef}
-      className={`group relative transition-all duration-300 spring ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      className={`group relative transition-all duration-200 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
@@ -62,7 +62,7 @@ const FeatureCard = ({ feature, index }) => {
       }}
     >
       {/* Card Background */}
-              <div className={`relative glass rounded-2xl p-8 h-full transition-all duration-200 spring ${
+              <div className={`relative glass rounded-2xl p-8 h-full transition-all duration-150 ${
         isHovered ? 'glow-primary' : ''
       }`}>
         {/* Gradient Overlay */}
@@ -72,8 +72,8 @@ const FeatureCard = ({ feature, index }) => {
         
         {/* Icon Container */}
         <div className="relative mb-6">
-          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center transition-all duration-300 spring ${
-            isHovered ? 'scale-110 glow-primary' : 'scale-100'
+          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center transition-all duration-200 ${
+            isHovered ? 'scale-105 glow-primary' : 'scale-100'
           }`}>
             <Icon 
               name={feature.icon} 

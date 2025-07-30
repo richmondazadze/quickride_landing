@@ -112,7 +112,7 @@ const HeroSection = () => {
           opacity: Math.max(0.3, 1 - scrollY * 0.001)
         }}
       >
-                  <div className={`transition-all duration-400 spring ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                  <div className={`transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full mb-8 glow-accent animate-bounce-subtle">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
@@ -128,12 +128,12 @@ const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className={`text-lg lg:text-xl text-muted-foreground font-body max-w-2xl mb-8 leading-relaxed transition-all duration-400 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <p className={`text-lg lg:text-xl text-muted-foreground font-body max-w-2xl mb-8 leading-relaxed transition-all duration-300 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
             {subText}
           </p>
 
           {/* CTA Buttons */}
-          <div className={`flex flex-col sm:flex-row items-start justify-start space-y-4 sm:space-y-0 sm:space-x-6 mb-12 transition-all duration-400 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`flex flex-col sm:flex-row items-start justify-start space-y-4 sm:space-y-0 sm:space-x-6 mb-12 transition-all duration-300 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
             <Button
               variant="default"
               size="lg"
@@ -167,7 +167,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className={`flex flex-row justify-between items-start gap-4 sm:gap-8 max-w-2xl transition-all duration-400 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className={`flex flex-row justify-between items-start gap-4 sm:gap-8 max-w-2xl transition-all duration-300 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
             <div className="text-left flex-1">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-primary mb-1 sm:mb-2">10K+</div>
               <div className="text-xs sm:text-sm text-muted-foreground font-body">Active Riders</div>
@@ -192,9 +192,9 @@ const HeroSection = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-4 h-4 bg-primary rounded-full animate-float glow-primary opacity-60" />
-      <div className="absolute top-40 right-20 w-6 h-6 bg-secondary rounded-full animate-float-delayed glow-secondary opacity-40" />
-      <div className="absolute bottom-32 left-20 w-3 h-3 bg-accent rounded-full animate-float glow-accent opacity-50" />
+      <div className="absolute top-20 left-10 w-4 h-4 bg-primary rounded-full animate-float glow-primary opacity-40" />
+      <div className="absolute top-40 right-20 w-6 h-6 bg-secondary rounded-full animate-float-delayed glow-secondary opacity-30" />
+      <div className="absolute bottom-32 left-20 w-3 h-3 bg-accent rounded-full animate-float glow-accent opacity-30" />
     </section>
   );
 };

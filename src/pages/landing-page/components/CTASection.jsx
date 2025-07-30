@@ -53,9 +53,9 @@ const CTASection = () => {
 
         {/* App Download Section */}
         <div className="max-w-2xl mx-auto">
-          <div className={`transition-all duration-300 spring ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}>
+                  <div className={`transition-all duration-200 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>
                 <div className="glass rounded-2xl p-8 lg:p-12 glow-secondary">
                   <div className="text-center mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-6 glow-primary">
@@ -124,8 +124,8 @@ const CTASection = () => {
 
 
         {/* Bottom CTA */}
-        <div className={`text-center mt-16 lg:mt-24 transition-all duration-300 spring delay-200 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        <div className={`text-center mt-16 lg:mt-24 transition-all duration-200 delay-100 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>
           <div className="glass rounded-2xl p-8 lg:p-12 glow-primary">
             <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">

@@ -49,8 +49,8 @@ const TeamMemberCard = ({ member, index }) => {
   return (
     <div
       ref={cardRef}
-      className={`group relative transition-all duration-300 spring ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      className={`group relative transition-all duration-200 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
@@ -62,7 +62,7 @@ const TeamMemberCard = ({ member, index }) => {
       }}
     >
       {/* Card Container */}
-              <div className={`relative glass rounded-3xl p-8 h-full flex flex-col transition-all duration-200 spring ${
+              <div className={`relative glass rounded-3xl p-8 h-full flex flex-col transition-all duration-150 ${
         isHovered ? 'glow-primary' : ''
       }`}>
         {/* Background Gradient */}

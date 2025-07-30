@@ -200,8 +200,8 @@ const InnovationTimeline = () => {
               <div
                 key={index}
                 data-index={index}
-                className={`relative flex flex-col lg:flex-row items-start lg:items-center transition-all duration-500 spring ${
-                  visibleItems.has(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`relative flex flex-col lg:flex-row items-start lg:items-center transition-all duration-300 ${
+                  visibleItems.has(index) ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 } ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
                 onMouseEnter={() => setHoveredItem(index)}
                 onMouseLeave={() => setHoveredItem(null)}
