@@ -74,7 +74,7 @@ const CTASection = () => {
                 <div className="flex flex-col sm:flex-row gap-4">
                   {/* App Store Button */}
                   <a 
-                    href="#" 
+                    href="/" 
                     className="flex-1 group transition-all duration-300 hover:scale-105"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -96,7 +96,7 @@ const CTASection = () => {
                   
                   {/* Google Play Button */}
                   <a 
-                    href="#" 
+                    href="/" 
                     className="flex-1 group transition-all duration-300 hover:scale-105"
                     target="_blank"
                     rel="noopener noreferrer"

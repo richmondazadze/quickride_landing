@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
 
 const TeamMemberCard = ({ member, index }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -63,7 +62,7 @@ const TeamMemberCard = ({ member, index }) => {
       }}
     >
       {/* Card Container */}
-              <div className={`relative glass rounded-3xl p-8 h-full transition-all duration-200 spring ${
+              <div className={`relative glass rounded-3xl p-8 h-full flex flex-col transition-all duration-200 spring ${
         isHovered ? 'glow-primary' : ''
       }`}>
         {/* Background Gradient */}
@@ -71,29 +70,10 @@ const TeamMemberCard = ({ member, index }) => {
           isHovered ? 'opacity-100' : 'opacity-0'
         }`} />
 
-        {/* Profile Image */}
-        <div className="relative mb-6 flex justify-center">
-          <div className={`relative w-24 h-24 rounded-2xl overflow-hidden transition-all duration-300 spring ${
-            isHovered ? 'scale-110 glow-primary' : 'scale-100'
-          }`}>
-            <Image
-              src={member.avatar}
-              alt={member.name}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-          </div>
-          
-          {/* Status Indicator */}
-          <div className={`absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full flex items-center justify-center transition-all duration-300 ${
-            isHovered ? 'scale-125 glow-primary' : 'scale-100'
-          }`}>
-            <Icon name="Check" size={12} color="var(--color-primary-foreground)" />
-          </div>
-        </div>
+
 
         {/* Member Info */}
-        <div className="relative text-center space-y-4">
+        <div className="relative text-center space-y-4 flex-grow flex flex-col justify-center">
           <div>
             <h3 className={`text-xl font-heading font-bold transition-colors duration-300 ${
               isHovered ? 'text-primary' : 'text-foreground'
@@ -124,21 +104,7 @@ const TeamMemberCard = ({ member, index }) => {
             ))}
           </div>
 
-          {/* Social Links */}
-          <div className={`flex justify-center space-x-4 pt-4 transition-all duration-300 ${
-            isHovered ? 'opacity-100 translate-y-0' : 'opacity-70 translate-y-2'
-          }`}>
-            {member.social.map((link, idx) => (
-              <button
-                key={idx}
-                className={`w-10 h-10 rounded-xl glass flex items-center justify-center transition-all duration-200 magnetic ${
-                  isHovered ? 'glow-secondary hover:scale-110' : 'hover:bg-muted/50'
-                }`}
-              >
-                <Icon name={link.platform} size={16} color="var(--color-muted-foreground)" />
-              </button>
-            ))}
-          </div>
+
         </div>
 
         {/* Corner Decoration */}

@@ -7,52 +7,46 @@ import Button from '../../../components/ui/Button';
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Kwame Asante",
-      role: "Founder & CEO",
-      bio: "Visionary leader with 8+ years in tech innovation. KNUST Computer Science graduate passionate about transforming transportation in Ghana.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      skills: ["Leadership", "Strategy", "Innovation"],
-      social: [
-        { platform: "Linkedin", url: "#" },
-        { platform: "Twitter", url: "#" },
-        { platform: "Mail", url: "#" }
-      ]
+      name: "GAWUGAH, Paul Listowel",
+      role: "PROJECT MANAGER",
+      bio: "Experienced project manager coordinating team efforts, timelines, and deliverables to ensure successful project execution and delivery.",
+      skills: ["Management", "Planning", "Leadership"]
     },
     {
-      name: "Ama Osei",
-      role: "CTO & Co-founder",
-      bio: "Full-stack engineer and AI specialist. Leading our technical vision with expertise in mobile development and machine learning systems.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-      skills: ["AI/ML", "Mobile Dev", "Architecture"],
-      social: [
-        { platform: "Github", url: "#" },
-        { platform: "Linkedin", url: "#" },
-        { platform: "Twitter", url: "#" }
-      ]
+      name: "OFORI, Micah Dzidzo",
+      role: "BACKEND",
+      bio: "Experienced backend developer specializing in server-side development, database management, and API design for robust and scalable systems.",
+      skills: ["Backend", "API", "Database"]
     },
     {
-      name: "Kofi Mensah",
-      role: "Head of Operations",
-      bio: "Operations expert ensuring seamless ride experiences. Former logistics manager with deep understanding of Ghanaian transportation needs.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      skills: ["Operations", "Logistics", "Analytics"],
-      social: [
-        { platform: "Linkedin", url: "#" },
-        { platform: "Phone", url: "#" },
-        { platform: "Mail", url: "#" }
-      ]
+      name: "ASARE KYEI, Annie Pamela",
+      role: "FRONTEND",
+      bio: "Frontend specialist focused on creating responsive and intuitive user interfaces with modern web technologies and best practices.",
+      skills: ["Frontend", "React", "UI/UX"]
     },
     {
-      name: "Akosua Frimpong",
-      role: "Head of Design",
-      bio: "Creative designer crafting intuitive user experiences. Specializes in mobile UI/UX with focus on accessibility and cultural relevance.",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-      skills: ["UI/UX", "Branding", "Research"],
-      social: [
-        { platform: "Figma", url: "#" },
-        { platform: "Instagram", url: "#" },
-        { platform: "Dribbble", url: "#" }
-      ]
+      name: "MOHAMMED, Rayan Suhuyini",
+      role: "FRONTEND",
+      bio: "Frontend developer passionate about creating seamless user experiences with modern frameworks and responsive design principles.",
+      skills: ["Frontend", "JavaScript", "CSS"]
+    },
+    {
+      name: "YEBOAH, James Twum",
+      role: "FRONTEND",
+      bio: "Frontend specialist with expertise in modern web development, user interface design, and creating engaging digital experiences.",
+      skills: ["Frontend", "React", "TypeScript"]
+    },
+    {
+      name: "TACKIE-AKPLOR, John",
+      role: "FRONTEND",
+      bio: "Frontend developer with strong skills in modern web technologies, creating responsive and accessible user interfaces for web applications.",
+      skills: ["Frontend", "HTML", "CSS"]
+    },
+    {
+      name: "MAMBULIYA, Charity Tindan",
+      role: "POWERPOINT",
+      bio: "Presentation specialist creating compelling visual content and PowerPoint presentations that effectively communicate project ideas and progress.",
+      skills: ["PowerPoint", "Design", "Presentation"]
     }
   ];
 
@@ -81,7 +75,7 @@ const TeamSection = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12">
           {teamMembers.map((member, index) => (
             <TeamMemberCard key={index} member={member} index={index} />
           ))}
@@ -92,16 +86,16 @@ const TeamSection = () => {
           <div className="glass rounded-2xl p-8 lg:p-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-heading font-bold text-primary">15+</div>
+                <div className="text-3xl lg:text-4xl font-heading font-bold text-primary">7</div>
                 <div className="text-sm text-muted-foreground font-body">Team Members</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-heading font-bold text-secondary">5+</div>
-                <div className="text-sm text-muted-foreground font-body">Years Experience</div>
+                <div className="text-3xl lg:text-4xl font-heading font-bold text-secondary">5</div>
+                <div className="text-sm text-muted-foreground font-body">Frontend Developers</div>
               </div>
               <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-heading font-bold text-accent">3</div>
-                <div className="text-sm text-muted-foreground font-body">KNUST Graduates</div>
+                <div className="text-3xl lg:text-4xl font-heading font-bold text-accent">1</div>
+                <div className="text-sm text-muted-foreground font-body">Backend Developer</div>
               </div>
               <div className="space-y-2">
                 <div className="text-3xl lg:text-4xl font-heading font-bold text-primary">100%</div>
@@ -111,51 +105,7 @@ const TeamSection = () => {
           </div>
         </div>
 
-        {/* Join Team CTA */}
-        <div className="text-center mt-16 lg:mt-24">
-          <div className="glass rounded-2xl p-8 lg:p-12 glow-secondary">
-            <Icon name="Heart" size={48} className="text-primary mx-auto mb-6" />
-            <h3 className="text-2xl lg:text-3xl font-heading font-bold text-foreground mb-4">
-              Want to Join Our Mission?
-            </h3>
-            <p className="text-muted-foreground font-body mb-8 max-w-xl mx-auto">
-              We're always looking for talented individuals who share our passion 
-              for innovation and making transportation better for everyone.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Button
-                variant="default"
-                size="lg"
-                iconName="UserPlus"
-                iconPosition="right"
-                className="magnetic glow-primary min-w-48"
-                onClick={() => {
-                  const element = document.getElementById('get-started');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                View Openings
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                iconName="Mail"
-                iconPosition="left"
-                className="magnetic min-w-48"
-                onClick={() => {
-                  const element = document.getElementById('team');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       {/* Floating Elements */}
