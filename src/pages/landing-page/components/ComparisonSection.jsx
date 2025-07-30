@@ -121,9 +121,9 @@ const ComparisonSection = () => {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
                 {/* Category */}
-                <div className="text-center lg:text-left">
+                <div className="text-center md:text-left">
                   <h3 className="text-xl lg:text-2xl font-heading font-bold text-foreground mb-2">
                     {item.category}
                   </h3>
@@ -141,9 +141,9 @@ const ComparisonSection = () => {
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 glow-primary">
                       <Icon name={item.quickride.icon} size={32} color="var(--color-primary-foreground)" />
                     </div>
-                    <div className="text-3xl lg:text-4xl font-heading font-bold text-primary mb-2">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-primary mb-2">
                       {getDisplayValue(item.category, 'quickride', item.quickride.value)}
-                      <span className="text-lg text-muted-foreground ml-1">
+                      <span className="text-sm sm:text-lg text-muted-foreground ml-1">
                         {item.quickride.unit}
                       </span>
                     </div>
@@ -159,9 +159,9 @@ const ComparisonSection = () => {
                     <div className="w-16 h-16 bg-muted/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Icon name={item.traditional.icon} size={32} color="var(--color-muted-foreground)" />
                     </div>
-                    <div className="text-3xl lg:text-4xl font-heading font-bold text-muted-foreground mb-2">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-muted-foreground mb-2">
                       {getDisplayValue(item.category, 'traditional', item.traditional.value)}
-                      <span className="text-lg text-muted-foreground ml-1">
+                      <span className="text-sm sm:text-lg text-muted-foreground ml-1">
                         {item.traditional.unit}
                       </span>
                     </div>
