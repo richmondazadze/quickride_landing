@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>QuickRide - Future of Transportation in Ghana | AI-Powered Ride-Hailing</title>
+  <meta name="title" content="QuickRide - Future of Transportation in Ghana | AI-Powered Ride-Hailing" />
+  <meta name="description" content="Experience the future of transportation with QuickRide. AI-powered ride-hailing platform in Ghana featuring autonomous vehicles, holographic assistance, and quantum route optimization. Join thousands of riders and drivers." />
+  <meta name="keywords" content="ride-hailing, Ghana, transportation, AI, autonomous vehicles, taxi, driver, rider, Kumasi, Ghana transport, smart mobility, future transport" />
+  <meta name="author" content="QuickRide" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://quickride.gh/" />
+  <meta property="og:title" content="QuickRide - Future of Transportation in Ghana" />
+  <meta property="og:description" content="Experience the future of transportation with QuickRide. AI-powered ride-hailing platform featuring autonomous vehicles and smart routing." />
+  <meta property="og:image" content="https://quickride.gh/assets/images/mockup.webp" />
+  <meta property="og:site_name" content="QuickRide" />
+  <meta property="og:locale" content="en_US" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://quickride.gh/" />
+  <meta property="twitter:title" content="QuickRide - Future of Transportation in Ghana" />
+  <meta property="twitter:description" content="Experience the future of transportation with QuickRide. AI-powered ride-hailing platform featuring autonomous vehicles and smart routing." />
+  <meta property="twitter:image" content="https://quickride.gh/assets/images/mockup.webp" />
+  
+  <!-- Additional Meta Tags -->
+  <meta name="theme-color" content="#22c55e" />
+  <meta name="msapplication-TileColor" content="#22c55e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="QuickRide" />
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QuickRide",
+    "url": "https://quickride.gh",
+    "logo": "https://quickride.gh/assets/favicon/favicon.svg",
+    "description": "AI-powered ride-hailing platform revolutionizing transportation in Ghana",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kumasi",
+      "addressCountry": "GH"
+    },
+    "sameAs": [
+      "https://facebook.com/quickridegh",
+      "https://twitter.com/quickridegh",
+      "https://instagram.com/quickridegh"
+    ]
+  }
+  </script>
+  
+
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/index.jsx"></script>
+</body>
+
+</html>

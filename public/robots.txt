@@ -1,0 +1,11 @@
+# QuickRide Robots.txt
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://quickride.gh/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
